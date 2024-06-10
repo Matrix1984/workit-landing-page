@@ -11,7 +11,11 @@
   <title>Frontend Mentor | Workit landing page</title>
 
   <style>
-    :root {}
+    :root {
+      --bright_green: #44FFA1;
+      --dark-purple: rgb(36, 5, 62);
+
+    }
 
     @font-face {
       font-family: Fraunces;
@@ -23,13 +27,16 @@
       src: url(./assets/fonts/manrope/static/Manrope-Regular.ttf);
     }
 
-    .body {
+    body {
       font-family: manrope;
+      background-color: #FCF8FF;
     }
 
     .header {
       color: white;
-      background-color: rgb(36, 5, 62);
+      background-color: var(--dark-purple);
+      min-height: 56vh;
+      position: relative;
     }
 
     .upper-header-container {
@@ -47,8 +54,9 @@
     .application-link {
       margin-left: auto;
       border-bottom: 0.4rem solid #44FFA1;
-      border-radius: 2px; 
+      border-radius: 2px;
       font-size: 2rem;
+      font-weight: 500;
     }
 
     h1 {
@@ -62,9 +70,103 @@
     }
 
     h1>span {
-      border-bottom: 0.5rem solid #44FFA1;
+      border-bottom: 0.5rem solid var(--bright_green);
       border-radius: 2px;
     }
+
+    .learn-button { 
+      display: grid;
+      margin-top: 5rem; 
+      background: var(--bright_green);
+      width: 7.5em;
+      height: 3em;
+      margin: auto;
+      margin-top: 1.5em;
+      color: var(--dark-purple);
+      font-size: 1.3em;
+      font-weight: bolder;
+      font-family: manrope;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    .learn-button >span {
+      display: grid;
+      place-self: center;
+    }
+
+    .image-hero {
+      width: fit-content;
+      text-align: center;
+      margin: auto;
+      margin-top: 8.5rem;
+      position: absolute;
+    }
+
+    svg {
+      width: 100%;
+    }
+
+    .content-container {
+      margin-top: 16rem;
+    }
+
+    .marketing-article {
+      text-align: center;
+      
+    }
+
+    .marketing-number {
+      margin: auto;
+      border: solid 1px var(--dark-purple);
+      padding: 0.5em;
+      color: var(--dark-purple);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      margin-top: 5rem;
+      border-radius: 50%;
+      height: 5rem;
+      width: 5rem;
+      display: grid;
+      place-items: center;
+    }
+
+    .marketing-number>span {
+      margin-top: -3px;
+      font-family: Fraunces;
+      font-size: 2.5rem;
+    }
+
+    .marketing-header {
+      color: var(--dark-purple);
+      font-size: 3rem;
+      font-family: Fraunces;
+    }
+
+    .marketing-content {
+      margin-top: 1em;
+      padding: 0rem 2rem;
+      font-size: 1.7rem;
+      color:#584D62;
+    }
+
+    .owner-message{
+      position: relative;
+
+    }
+
+    .owner-message-title{
+
+    }
+
+    .owner-message{
+
+    }
+
+    .owner-access-btn{
+
+    }
+
   </style>
 </head>
 
@@ -87,21 +189,24 @@
     </h1>
 
     <div class="learn-button">
-      Learn more
+     <span>Learn more</span>
     </div>
 
-    <!--div>
-      <img src="./assets/images/image-hero.webp" />
-    </div-->
-  </div>
 
+    <div class="image-hero">
+      <img src="./assets/images/image-hero.webp" />
+    </div>
+  </div>
+  <svg width="500" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
+    <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="var(--dark-purple)" />
+  </svg>
 
   <div class="content-container">
 
     <div class="marketing-article">
 
       <div class="marketing-number">
-        1
+        <span> 1</span>
       </div>
 
       <div class="marketing-header">
@@ -118,7 +223,7 @@
     <div class="marketing-article">
 
       <div class="marketing-number">
-        2
+        <span> 2</span>
       </div>
 
       <div class="marketing-header">
@@ -136,7 +241,7 @@
     <div class="marketing-article">
 
       <div class="marketing-number">
-        3
+        <span> 3</span>
       </div>
 
       <div class="marketing-header">
@@ -170,8 +275,7 @@
           Apply for access
         </div>
       </div>
-    </div>
-
+    </div> 
 
     <div class="footer-logo-grid">
       <div class="workit-smll-logo"></div>
@@ -180,14 +284,7 @@
       <div class="social-media-logo-three"></div>
     </div>
 
-  </div>
-
-
-
-
-
-
-
+  </div> 
 
 </body>
 
