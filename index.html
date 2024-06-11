@@ -53,9 +53,8 @@
 
     .application-link {
       margin-left: auto;
-      border-bottom: 0.4rem solid #44FFA1;
-      border-radius: 2px;
-      font-size: 2rem;
+      border-bottom: 0.5rem solid #44FFA1;
+      font-size: 1.8rem;
       font-weight: 500;
     }
 
@@ -63,7 +62,7 @@
       font-family: Fraunces;
       text-align: center;
       font-size: 3.5em;
-      margin-top: 0.6em;
+      margin-top: 0.8em;
       margin-left: 0.3em;
       margin-right: 0.3em;
       line-height: 1.2;
@@ -74,14 +73,14 @@
       border-radius: 2px;
     }
 
-    .learn-button { 
+    .learn-button {
       display: grid;
-      margin-top: 5rem; 
+      margin-top: 5rem;
       background: var(--bright_green);
       width: 7.5em;
       height: 3em;
       margin: auto;
-      margin-top: 1.5em;
+      margin-top: 1.8em;
       color: var(--dark-purple);
       font-size: 1.3em;
       font-weight: bolder;
@@ -90,7 +89,7 @@
       padding-right: 1em;
     }
 
-    .learn-button >span {
+    .learn-button>span {
       display: grid;
       place-self: center;
     }
@@ -103,17 +102,26 @@
       position: absolute;
     }
 
+    .image-hero>img { 
+      max-width: 90%;
+      margin: auto;
+    }
+
     svg {
       width: 100%;
     }
 
     .content-container {
-      margin-top: 16rem;
+      margin-top: 18rem;
     }
 
     .marketing-article {
       text-align: center;
-      
+
+    }
+
+    #last-article {
+      margin-bottom: 15rem;
     }
 
     .marketing-number {
@@ -147,26 +155,76 @@
       margin-top: 1em;
       padding: 0rem 2rem;
       font-size: 1.7rem;
-      color:#584D62;
+      color: #584D62;
     }
 
-    .owner-message{
+    .owner-container {
+      position: relative;
+      top: 14em;
+      text-align: center;
+      background-color: var(--dark-purple);
+      color: white;
+      padding-bottom: 4rem;
+      WIDTH: 95%;
+      MARGIN: auto
+    }
+
+    .owner-message {
       position: relative;
 
     }
 
-    .owner-message-title{
+    .owner-message-title {
+      font-size: 3.5rem;
+      padding-top: 3.5rem;
+      font-family: Fraunces;
+      padding-bottom: 2rem;
+    }
+
+    .owner-message {
+      width: 80%;
+      margin: auto;
+      font-family: 'manrope';
+      font-size: 1em;
+    }
+
+    .owner-icon {
+      position: absolute;
+      top: -332px;
+      z-index: -1;
+      width: 29rem;
+      top: -237px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .owner-access-btn {
+      background-color: var(--bright_green);
+      width: 54%;
+      margin: auto;
+      color: var(--dark-purple);
+      font-weight: 900;
+      padding: 1em;
+      margin-top: 3rem;
 
     }
 
-    .owner-message{
-
+    .footer-logo-grid {
+      width: fit-content;
+      margin: auto;
+      margin-top: 31rem;
     }
 
-    .owner-access-btn{
-
+    .social-media-logos-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      column-gap: 2rem;
+      margin-top: 6rem;
+      margin-bottom: 7rem;
     }
-
   </style>
 </head>
 
@@ -189,7 +247,7 @@
     </h1>
 
     <div class="learn-button">
-     <span>Learn more</span>
+      <span>Learn more</span>
     </div>
 
 
@@ -248,7 +306,7 @@
         Always affordable
       </div>
 
-      <div class="marketing-content">
+      <div class="marketing-content" id="last-article">
         Always affordable pricing that scales with your business. Get top-quality product data
         analytics services without hidden costs or unexpected fees.
       </div>
@@ -257,7 +315,7 @@
 
     <div class="owner-container">
       <div class="owner-icon">
-
+        <img src="assets/images/image-founder.webp" />
       </div>
 
       <div class="owner-message">
@@ -275,16 +333,26 @@
           Apply for access
         </div>
       </div>
-    </div> 
-
-    <div class="footer-logo-grid">
-      <div class="workit-smll-logo"></div>
-      <div class="social-media-logo-one"></div>
-      <div class="social-media-logo-two"></div>
-      <div class="social-media-logo-three"></div>
     </div>
 
-  </div> 
+    <div class="footer-logo-grid">
+      <div class="workit-smll-logo">
+        <img src="./assets/images/logo-dark.svg" />
+      </div>
+      <div class="social-media-logos-container">
+        <div class="social-media-logo-one">
+          <img src="./assets/images/icon-facebook.svg" />
+        </div>
+        <div class="social-media-logo-two">
+          <img src="./assets/images/icon-twitter.svg" />
+        </div>
+        <div class="social-media-logo-three">
+          <img src="./assets/images/icon-instagram.svg" />
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 </body>
 
