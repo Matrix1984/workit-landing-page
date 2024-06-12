@@ -14,7 +14,7 @@
     :root {
       --bright_green: #44FFA1;
       --dark-purple: rgb(36, 5, 62);
-
+      --grey: rgb(253, 250, 255);
     }
 
     @font-face {
@@ -29,14 +29,20 @@
 
     body {
       font-family: manrope;
-      background-color: #FCF8FF;
+
     }
 
     .header {
       color: white;
       background-color: var(--dark-purple);
-      min-height: 56vh;
+      min-height: 50rem;
       position: relative;
+    }
+
+    .header-separator {
+      background-color:  var(--grey);;
+      width: 100%;
+      min-height: 12rem;
     }
 
     .upper-header-container {
@@ -49,7 +55,10 @@
       padding-right: 1.5rem;
     }
 
-    .logo {}
+    .curved-bottom {
+      border-bottom-left-radius: 50% 40%;
+      border-bottom-right-radius: 50% 40%;
+    }
 
     .application-link {
       margin-left: auto;
@@ -98,11 +107,11 @@
       width: fit-content;
       text-align: center;
       margin: auto;
-      margin-top: 8.5rem;
+      margin-top: 5.5rem;
       position: absolute;
     }
 
-    .image-hero>img { 
+    .image-hero>img {
       max-width: 90%;
       margin: auto;
     }
@@ -112,17 +121,17 @@
     }
 
     .content-container {
-      margin-top: 18rem;
+
+      background-color: var(--grey);
     }
+
+    main {}
 
     .marketing-article {
       text-align: center;
 
     }
-
-    #last-article {
-      margin-bottom: 15rem;
-    }
+ 
 
     .marketing-number {
       margin: auto;
@@ -131,12 +140,16 @@
       color: var(--dark-purple);
       font-size: 2rem;
       margin-bottom: 2rem;
-      margin-top: 5rem;
+
       border-radius: 50%;
       height: 5rem;
       width: 5rem;
       display: grid;
       place-items: center;
+    }
+
+    .marketing-number-separtor {
+      margin-top: 5rem;
     }
 
     .marketing-number>span {
@@ -225,6 +238,39 @@
       margin-top: 6rem;
       margin-bottom: 7rem;
     }
+
+    .custom-shape-divider-bottom-1718163271 { 
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      fill: #FCF8FF;
+      height: 3rem;
+      background-color: var(--dark-purple);
+    } 
+
+    .custom-shape-divider-bottom-1718163271 .shape-fill {
+      fill: #FCF8FF;
+      stroke: transparent;
+      stroke-width: 0px;
+    } 
+    
+    .custom-shape-divider-bottom {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      fill: white;
+      margin-bottom: 11rem;
+    } 
+    
+    .custom-shape-divider-bottom .shape-fill {
+      fill: var(--grey);
+      stroke: transparent;
+      stroke-width: 0px;
+    }
   </style>
 </head>
 
@@ -251,14 +297,19 @@
     </div>
 
 
-    <div class="image-hero">
-      <img src="./assets/images/image-hero.webp" />
-    </div>
-  </div>
-  <svg width="500" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
-    <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="var(--dark-purple)" />
-  </svg>
 
+
+    <!--div class="image-hero ">
+      <img src="./assets/images/image-hero.webp" />
+    </div-->
+  </div>
+  <div class="custom-shape-divider-bottom-1718163271">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 119" preserveAspectRatio="none">
+      <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"></path>
+    </svg>
+  </div>
+
+  <div class="header-separator"></div>
   <div class="content-container">
 
     <div class="marketing-article">
@@ -278,9 +329,9 @@
 
     </div>
 
-    <div class="marketing-article">
+    <div class="marketing-article marketing-number-separtor">
 
-      <div class="marketing-number">
+      <div class="marketing-number  ">
         <span> 2</span>
       </div>
 
@@ -295,8 +346,7 @@
 
     </div>
 
-
-    <div class="marketing-article">
+    <div class="marketing-article marketing-number-separtor ">
 
       <div class="marketing-number">
         <span> 3</span>
@@ -310,49 +360,57 @@
         Always affordable pricing that scales with your business. Get top-quality product data
         analytics services without hidden costs or unexpected fees.
       </div>
+      
+    </div>
+    <div class="custom-shape-divider-bottom">
+      <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 119" preserveAspectRatio="none">
+        <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"></path>
+      </svg>
+    </div>
+  </div>
+  
 
+
+  <div class="owner-container">
+    <div class="owner-icon">
+      <img src="assets/images/image-founder.webp" />
     </div>
 
-    <div class="owner-container">
-      <div class="owner-icon">
-        <img src="assets/images/image-founder.webp" />
+    <div class="owner-message">
+      <div class="owner-message-title">
+        Be the first to test
       </div>
 
       <div class="owner-message">
-        <div class="owner-message-title">
-          Be the first to test
-        </div>
+        Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a
+        beta tester for our app and kickstart your company. Apply for access below and I’ll be
+        in touch to schedule a call.
+      </div>
 
-        <div class="owner-message">
-          Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a
-          beta tester for our app and kickstart your company. Apply for access below and I’ll be
-          in touch to schedule a call.
-        </div>
-
-        <div class="owner-access-btn">
-          Apply for access
-        </div>
+      <div class="owner-access-btn">
+        Apply for access
       </div>
     </div>
-
-    <div class="footer-logo-grid">
-      <div class="workit-smll-logo">
-        <img src="./assets/images/logo-dark.svg" />
-      </div>
-      <div class="social-media-logos-container">
-        <div class="social-media-logo-one">
-          <img src="./assets/images/icon-facebook.svg" />
-        </div>
-        <div class="social-media-logo-two">
-          <img src="./assets/images/icon-twitter.svg" />
-        </div>
-        <div class="social-media-logo-three">
-          <img src="./assets/images/icon-instagram.svg" />
-        </div>
-      </div>
-    </div>
-
   </div>
+
+  <div class="footer-logo-grid">
+    <div class="workit-smll-logo">
+      <img src="./assets/images/logo-dark.svg" />
+    </div>
+    <div class="social-media-logos-container">
+      <div class="social-media-logo-one">
+        <img src="./assets/images/icon-facebook.svg" />
+      </div>
+      <div class="social-media-logo-two">
+        <img src="./assets/images/icon-twitter.svg" />
+      </div>
+      <div class="social-media-logo-three">
+        <img src="./assets/images/icon-instagram.svg" />
+      </div>
+    </div>
+  </div>
+
+
 
 </body>
 
